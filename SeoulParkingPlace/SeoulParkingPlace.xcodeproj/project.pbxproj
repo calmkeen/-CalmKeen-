@@ -16,6 +16,7 @@
 		75E2F381297E62AF006DB40D /* SeoulParkingPlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F380297E62AF006DB40D /* SeoulParkingPlaceTests.swift */; };
 		75E2F38B297E62AF006DB40D /* SeoulParkingPlaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F38A297E62AF006DB40D /* SeoulParkingPlaceUITests.swift */; };
 		75E2F38D297E62AF006DB40D /* SeoulParkingPlaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F38C297E62AF006DB40D /* SeoulParkingPlaceUITestsLaunchTests.swift */; };
+		75E2F3A0297E70F2006DB40D /* CreateTodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F39F297E70F2006DB40D /* CreateTodoListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		75E2F386297E62AF006DB40D /* SeoulParkingPlaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeoulParkingPlaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E2F38A297E62AF006DB40D /* SeoulParkingPlaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulParkingPlaceUITests.swift; sourceTree = "<group>"; };
 		75E2F38C297E62AF006DB40D /* SeoulParkingPlaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulParkingPlaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		75E2F39F297E70F2006DB40D /* CreateTodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTodoListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,12 @@
 		75E2F35D297E62AE006DB40D = {
 			isa = PBXGroup;
 			children = (
-				75E2F368297E62AE006DB40D /* SeoulParkingPlace */,
+				75E2F39E297E7018006DB40D /* Util */,
+				75E2F39D297E7011006DB40D /* ThirdParty */,
+				75E2F39C297E700A006DB40D /* ViewModel */,
+				75E2F39B297E7002006DB40D /* Controller */,
+				75E2F39A297E6FFE006DB40D /* View */,
+				75E2F399297E6FED006DB40D /* Model */,
 				75E2F37F297E62AF006DB40D /* SeoulParkingPlaceTests */,
 				75E2F389297E62AF006DB40D /* SeoulParkingPlaceUITests */,
 				75E2F367297E62AE006DB40D /* Products */,
@@ -94,20 +101,6 @@
 				75E2F386297E62AF006DB40D /* SeoulParkingPlaceUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		75E2F368297E62AE006DB40D /* SeoulParkingPlace */ = {
-			isa = PBXGroup;
-			children = (
-				75E2F369297E62AE006DB40D /* AppDelegate.swift */,
-				75E2F36B297E62AE006DB40D /* SceneDelegate.swift */,
-				75E2F36D297E62AE006DB40D /* ViewController.swift */,
-				75E2F36F297E62AE006DB40D /* Main.storyboard */,
-				75E2F372297E62AF006DB40D /* Assets.xcassets */,
-				75E2F374297E62AF006DB40D /* LaunchScreen.storyboard */,
-				75E2F377297E62AF006DB40D /* Info.plist */,
-			);
-			path = SeoulParkingPlace;
 			sourceTree = "<group>";
 		};
 		75E2F37F297E62AF006DB40D /* SeoulParkingPlaceTests */ = {
@@ -125,6 +118,64 @@
 				75E2F38C297E62AF006DB40D /* SeoulParkingPlaceUITestsLaunchTests.swift */,
 			);
 			path = SeoulParkingPlaceUITests;
+			sourceTree = "<group>";
+		};
+		75E2F399297E6FED006DB40D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75E2F39F297E70F2006DB40D /* CreateTodoListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		75E2F39A297E6FFE006DB40D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75E2F3A1297E77AC006DB40D /* TableViewCell */,
+				75E2F36F297E62AE006DB40D /* Main.storyboard */,
+				75E2F374297E62AF006DB40D /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		75E2F39B297E7002006DB40D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				75E2F36D297E62AE006DB40D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		75E2F39C297E700A006DB40D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		75E2F39D297E7011006DB40D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				75E2F377297E62AF006DB40D /* Info.plist */,
+				75E2F369297E62AE006DB40D /* AppDelegate.swift */,
+				75E2F36B297E62AE006DB40D /* SceneDelegate.swift */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		75E2F39E297E7018006DB40D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				75E2F372297E62AF006DB40D /* Assets.xcassets */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		75E2F3A1297E77AC006DB40D /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +312,7 @@
 				75E2F36E297E62AE006DB40D /* ViewController.swift in Sources */,
 				75E2F36A297E62AE006DB40D /* AppDelegate.swift in Sources */,
 				75E2F36C297E62AE006DB40D /* SceneDelegate.swift in Sources */,
+				75E2F3A0297E70F2006DB40D /* CreateTodoListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
