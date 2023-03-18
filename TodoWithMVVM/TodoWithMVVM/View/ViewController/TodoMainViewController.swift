@@ -10,7 +10,7 @@ import UIKit
 class TodoMainViewController: UIViewController {
     
     //cell 데이터
-    var cellCount = TodoListModel()
+    var cellCount: [TodoListModel] = []
 
     @IBOutlet weak var titleBarView: UIView!
     
@@ -28,20 +28,19 @@ class TodoMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        self.navigationController?.isNavigationBarHidden = true
     }
 }
 
 extension TodoMainViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellCount.title.count
+        return cellCount.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TodoMainListCell", for: indexPath) as? TodoListModel else { return UITableViewCell()
+        }
     }
-        cell.
-    
-    
 }
 

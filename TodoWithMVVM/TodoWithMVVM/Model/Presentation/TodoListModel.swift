@@ -9,10 +9,10 @@ import Foundation
 
 class TodoListModel {
     var title: String
-    var check: Bool
+    var checkDo: Bool
     
-    init(title: String, check: Bool) {
+    init(title: String, checkDo: Bool) {
         self.title = title
-        self.check = check
+        self.checkDo = checkDo
     }
 }

@@ -12,34 +12,38 @@ import SnapKit
 class TodoMainViewCell: UITableViewCell {
     
     static let identifier = "TodoMainListCell"
-    var todoListModel: [TodoListModel]
-
+    var todoListModel: [TodoListModel] = []
+    
+    //체크를 감지하는 변수
+    var isChecked: Bool = false
+    //셀 전체의ㅡ ui
     private let todoListCell: UIView = {
        let cell = UIView()
         return cell
     }()
-    
+    //ui title
     var todoListTitle: UILabel = {
        let titleLabel = UILabel()
-        titleLabel.text = TodoListModel.title
         return titleLabel
     }()
+    //체크 이미지 버튼
     var todoListCheck: UIButton = {
         let btn = UIButton()
-//        bool.images = "체크안된 이미지 박스"
-        if bool == false {
-            return self()
-        } else if bool == true {
-            return bool.image = "체크된 이미지"
-        }
-        return bool
+        btn.setImage(UIImage(named: "btn_check_off"), for: .focused)
+        return btn
     }()
-    func checkBtn(action: todoListCheck) {
+    
+    func DataLoad(todoListModel: TodoListModel) {
+        todoListTitle.text = todoListModel.title
+    }
+    
+    
+    func checkBtn() {
         var checkbool: Bool = false
         if checkbool == false {
             checkbool = true
         } else {
-            return checkbool.description.reversed()
+            return checkbool = false
         }
     }
     
@@ -67,4 +71,14 @@ class TodoMainViewCell: UITableViewCell {
         }
     }
 
+}
+extension TodoMainViewCell {
+    enum Btn {
+        static let notCheckBtn = "btn_check_off"
+        static let CheckBtn = "btn_check_on"
+    }
+    private func setCheck(){
+        
+    }
+    
 }
