@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7543E0FA29D7FDC80034C14C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7543E0F929D7FDC80034C14C /* Lottie */; };
+		7543E0FD29D7FF490034C14C /* Checkbox.json in Resources */ = {isa = PBXBuildFile; fileRef = 7543E0FC29D7FF490034C14C /* Checkbox.json */; };
 		7546EFDC29B0758200C457D0 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7546EFDB29B0758200C457D0 /* UserInfoModel.swift */; };
 		75632A0229ADF98F00B8EFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75632A0129ADF98F00B8EFC7 /* AppDelegate.swift */; };
 		75632A0429ADF98F00B8EFC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75632A0329ADF98F00B8EFC7 /* SceneDelegate.swift */; };
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7543E0FC29D7FF490034C14C /* Checkbox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Checkbox.json; sourceTree = "<group>"; };
 		7546EFDB29B0758200C457D0 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		756329FE29ADF98F00B8EFC7 /* TodoWithMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoWithMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75632A0129ADF98F00B8EFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75AAF1A529B3232700E1C63D /* SnapKit in Frameworks */,
+				7543E0FA29D7FDC80034C14C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7543E0FB29D7FF360034C14C /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				7543E0FC29D7FF490034C14C /* Checkbox.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		756329F529ADF98F00B8EFC7 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +227,7 @@
 		75632A3A29ADFA4C00B8EFC7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7543E0FB29D7FF360034C14C /* Lottie */,
 				75632A0A29ADF99000B8EFC7 /* Assets.xcassets */,
 				75632A0F29ADF99000B8EFC7 /* Info.plist */,
 			);
@@ -255,6 +268,7 @@
 			name = TodoWithMVVM;
 			packageProductDependencies = (
 				75AAF1A429B3232700E1C63D /* SnapKit */,
+				7543E0F929D7FDC80034C14C /* Lottie */,
 			);
 			productName = TodoWithMVVM;
 			productReference = 756329FE29ADF98F00B8EFC7 /* TodoWithMVVM.app */;
@@ -330,6 +344,7 @@
 			mainGroup = 756329F529ADF98F00B8EFC7;
 			packageReferences = (
 				75AAF1A329B3232700E1C63D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7543E0F829D7FDC80034C14C /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 756329FF29ADF98F00B8EFC7 /* Products */;
 			projectDirPath = "";
@@ -347,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7543E0FD29D7FF490034C14C /* Checkbox.json in Resources */,
 				75632A0E29ADF99000B8EFC7 /* LaunchScreen.storyboard in Resources */,
 				75632A0B29ADF99000B8EFC7 /* Assets.xcassets in Resources */,
 				75632A0929ADF98F00B8EFC7 /* Main.storyboard in Resources */,
@@ -724,6 +740,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7543E0F829D7FDC80034C14C /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		75AAF1A329B3232700E1C63D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -735,6 +759,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7543E0F929D7FDC80034C14C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7543E0F829D7FDC80034C14C /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		75AAF1A429B3232700E1C63D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 75AAF1A329B3232700E1C63D /* XCRemoteSwiftPackageReference "SnapKit" */;

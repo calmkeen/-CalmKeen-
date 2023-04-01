@@ -7,9 +7,12 @@
 
 import UIKit
 import SnapKit
-
+import Lottie
 
 class TodoMainViewCell: UITableViewCell {
+    
+    let animationView: LottieAnimationView = .init(name: "Checkbox")
+    
     
     static let identifier = "TodoMainListCell"
     var todoListModel: [TodoListModel] = []
@@ -18,18 +21,19 @@ class TodoMainViewCell: UITableViewCell {
     var isChecked: Bool = false
     //셀 전체의ㅡ ui
     private let todoListCell: UIView = {
-       let cell = UIView()
+        let cell = UIView()
         return cell
     }()
     //ui title
     var todoListTitle: UILabel = {
-       let titleLabel = UILabel()
+        let titleLabel = UILabel()
         return titleLabel
     }()
     //체크 이미지 버튼
     var todoListCheck: UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(named: "btn_check_off"), for: .focused)
+        btn.addTarget(self, action: #selector(checkBtn), for: .touchUpInside)
         return btn
     }()
     
@@ -37,20 +41,28 @@ class TodoMainViewCell: UITableViewCell {
         todoListTitle.text = todoListModel.title
     }
     
-    
+    @objc
     func checkBtn() {
         var checkbool: Bool = false
         if checkbool == false {
             checkbool = true
+//            lottie 체크 박스
+            animationView.play()
         } else {
             return checkbool = false
         }
+    }
+    
+    func setData(todoData: TodoListModel){
+        todoListTitle.text = todoData.title
+        todoListCheck = todoData.checkDo
     }
     
     func makeCell() {
         addSubview(todoListCell)
         addSubview(todoListTitle)
         addSubview(todoListCheck)
+        self.addSubview(animationView)
     }
     
     func makeConstraints() {
@@ -70,7 +82,7 @@ class TodoMainViewCell: UITableViewCell {
             
         }
     }
-
+    
 }
 extension TodoMainViewCell {
     enum Btn {
@@ -82,3 +94,29 @@ extension TodoMainViewCell {
     }
     
 }
+
+//MARK: - for Debug Preview Provider // snapkit or anuto layout에 관련된 UI를 볼 수 있는 뷰들을 swift UI로 미리 볼수 있게 해줍니다.셀은 어떻게 uiViewController로  wrapping할지 모르겠다
+
+//#if DEBUG
+//
+//import SwiftUI
+//
+//struct TestViewPresentable: UIViewControllerRepresentable {
+//    @available(iOS 13.0, *)
+//    //표시할 cell들을 makeUIViewcontroller에 표시해 주고
+//    func makeUIViewController(context: Context) -> UIViewController {
+//        return TodoMainViewCell()
+//    }
+//
+//    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+//
+//    }
+//}
+//
+////여기 Peview Provider에서 UIViewControllerREpresentable 에서 만들어진 ui를 불러옵니다.
+//struct TestViewFor_Preview: PreviewProvider {
+//    static var previews: some View {
+//        TestViewPresentable()
+//    }
+//}
+//#endif

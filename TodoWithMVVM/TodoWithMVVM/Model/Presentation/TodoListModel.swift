@@ -12,7 +12,9 @@ class TodoListModel {
     var checkDo: Bool
     
     init(title: String, checkDo: Bool) {
-        self.title = title
-        self.checkDo = checkDo
+//        self.title = title
+//        self.checkDo = checkDo
+//        self.title = "달리기 10Km"
+//        self.checkDo = false
     }
 }

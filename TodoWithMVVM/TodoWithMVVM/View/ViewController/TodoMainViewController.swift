@@ -27,6 +27,7 @@ class TodoMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        table
         // Do any additional setup after loading the view.
 //        self.navigationController?.isNavigationBarHidden = true
     }
@@ -39,8 +40,8 @@ extension TodoMainViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TodoMainListCell", for: indexPath) as? TodoListModel else { return UITableViewCell()
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TodoMainListCell", for: indexPath) as? TodoListModel else { return UITableViewCell()}
+        
     }
 }
 
