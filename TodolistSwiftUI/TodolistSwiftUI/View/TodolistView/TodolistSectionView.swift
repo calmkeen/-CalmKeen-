@@ -8,10 +8,37 @@
 import SwiftUI
 
 struct TodolistSectionView: View {
+    //MARK: - PROPERTIES
+    
+    @State private var checkboxButton = false
+//    var todoModel: TodolistModel
+    
+    //MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Spacer()
+        
+        Toggle(isOn: $checkboxButton) {
+            Text("todoModel.title를 달성했습니다!")
+        }
+        .toggleStyle(iosCheckboxToggleStyle())
+        VStack(spacing: 10) {
+            Button(action: {
+                checkboxButton = !checkboxButton
+            }, label: {
+                if checkboxButton == false {
+                    Image(systemName: "squre")
+                    
+                        .resizable()
+                } else {
+                    Image(systemName: "checkmark.square")
+                        .resizable()
+                }
+                })
+            }
+
+            }
     }
-}
+
 
 #Preview {
     TodolistSectionView()
